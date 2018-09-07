@@ -8,4 +8,4 @@ define("DB_NAME", "shareboard");
 
 //Define URL
 define("ROOT_PATH", "/mvc-blog/");
-define("ROOT_URL", "http://localhost/");
+define("ROOT_URL", "http://localhost/mvc-blog/");

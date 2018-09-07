@@ -1,5 +1,5 @@
 <?php
-Class HomeModel{
+Class HomeModel extends Model{
     public function Index(){
         return;
     }

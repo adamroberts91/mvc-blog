@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Adam
- * Date: 06/09/2018
- * Time: 17:21
- */
+Class ShareModel extends Model{
+    public function Index(){
+        $this->query("SELECT * FROM shares");
+        $rows = $this->resultSet();
+        return $rows;
+    }
+}
