@@ -1,23 +1,21 @@
 <?php
-//Include config
-error_reporting( ~E_NOTICE );
-include('config.php');
+// Include Config
+require('config.php');
 
-include('classes/Bootstrap.php');
-include('classes/Controller.php');
-include('classes/Model.php');
+require('classes/Bootstrap.php');
+require('classes/Controller.php');
+require('classes/Model.php');
 
-include('controllers/home.php');
-include('controllers/shares.php');
-include('controllers/users.php');
+require('controllers/home.php');
+require('controllers/shares.php');
+require('controllers/users.php');
 
-include('models/home.php');
-include('models/share.php');
-include('models/user.php');
-
+require('models/home.php');
+require('models/share.php');
+require('models/user.php');
 
 $bootstrap = new Bootstrap($_GET);
 $controller = $bootstrap->createController();
-if($controller) {
-    $controller->executeAction();
+if($controller){
+	$controller->executeAction();
 }

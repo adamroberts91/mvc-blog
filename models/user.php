@@ -1,6 +1,6 @@
 <?php
-Class UserModel extends Model{
-    public function Index(){
-        return;
-    }
+class UserModel extends Model{
+	public function Index(){
+		return;
+	}
 }

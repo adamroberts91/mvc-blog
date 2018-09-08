@@ -1,46 +1,41 @@
 <html>
 <head>
-    <title>Shareboard</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<title>Shareboard</title>
+	<link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo ROOT_PATH; ?>assets/css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Shareboard</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+	<nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Shareboard</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="<?php echo ROOT_URL; ?>">Home</a></li>
+            <li><a href="<?php echo ROOT_URL; ?>shares">Shares</a></li>
+          </ul>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo ROOT_URL; ?>">Home <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo ROOT_URL; ?>shares">Shares</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo ROOT_URL; ?>users/login">Login <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo ROOT_URL; ?>users/register">Register</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
+            <li><a href="<?php echo ROOT_URL; ?>users/register">Register</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-<main role="main" class="container">
+    <div class="container">
 
-    <div style="padding: 10px;">
-        <?php require($view); ?>
-    </div>
+     <div class="row">
+     	<?php require($view); ?>
+     </div>
 
-</main><!-- /.container -->
+    </div><!-- /.container -->
 </body>
 </html>
